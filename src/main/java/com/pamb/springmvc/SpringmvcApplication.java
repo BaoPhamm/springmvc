@@ -1,13 +1,14 @@
 package com.pamb.springmvc;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+//import org.springframework.context.annotation.ComponentScan;
+//import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
-public class SpringmvcApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(SpringmvcApplication.class, args);
-	}
-
-}
+//@Configuration
+//@ComponentScan(basePackages = "com.pamb.springmvc")
+//public class SpringmvcApplication {
+//
+//    public static void main(String[] args) {
+//        SpringApplication.run(SpringmvcApplication.class, args);
+//    }
+//
+//}
