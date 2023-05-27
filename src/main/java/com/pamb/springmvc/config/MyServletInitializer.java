@@ -19,6 +19,6 @@ public class MyServletInitializer implements WebApplicationInitializer {
         ServletRegistration.Dynamic servlet =
                 servletContext.addServlet("springDispatcherServlet", dispatcherServlet);
         servlet.setLoadOnStartup(1);
-        servlet.addMapping("/");
+        servlet.addMapping("/servlet2/*");
     }
 }
