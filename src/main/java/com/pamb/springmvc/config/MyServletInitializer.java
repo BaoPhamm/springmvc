@@ -12,11 +12,12 @@ public class MyServletInitializer implements WebApplicationInitializer {
 
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
-        AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
-        ctx.setServletContext(servletContext);
-        ctx.register(WebConfig.class);
-        DispatcherServlet dispatcherServlet = new DispatcherServlet(ctx);
-        ServletRegistration.Dynamic servlet = servletContext.addServlet("dispatcher", dispatcherServlet);
+        AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
+        context.setServletContext(servletContext);
+        context.register(WebConfig.class);
+        DispatcherServlet dispatcherServlet = new DispatcherServlet(context);
+        ServletRegistration.Dynamic servlet =
+                servletContext.addServlet("springDispatcherServlet", dispatcherServlet);
         servlet.setLoadOnStartup(1);
         servlet.addMapping("/");
     }
